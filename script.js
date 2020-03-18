@@ -31,7 +31,8 @@ btn.addEventListener('click', function () {
 
 
 function checkInput(start, monthIncrease, percent, days) {
-    if(start.value <= 0 || monthIncrease.value <= 0 || percent.value <= 0 || percent.value > 100 || days.value <= 0){
+    if(start.value <= 0 || monthIncrease.value <= 0 || percent.value <= 0 || percent.value > 100 || days.value <= 0 || 
+        Math.trunc(days.value)!=days.value){
         if (start.value <= 0) {
             first.className='show';
             console.log('Начальная сумма вклада содержит ошибку ввода');
@@ -52,7 +53,7 @@ function checkInput(start, monthIncrease, percent, days) {
         else{
             third.className='block';
         }
-        if (days.value <= 0) {
+        if (days.value <= 0 || Math.trunc(days.value)!=days.value) {
             fourth.className='show';
             console.log('Срок содержит ошибку ввода');
         }
