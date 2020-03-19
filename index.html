@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="calc">
-            <table>
-                <tr>
-                    <td>Начальная сумма вклада (₽)</td>
-                    <td><input type="text" id="start"></td>
-                </tr>
-                <tr>
-                    <td>Сумма ежемесячного пополнения (₽)</td>
-                    <td><input type="text" id="monthIncrease"></td>
-                </tr>
-                <tr>
-                    <td>Процентная ставка (%)</td>
-                    <td><input type="text" id="percent"></td>
-                </tr>
-                <tr>
-                    <td>Срок вклада (дней)</td>
-                    <td><input type="text" id="days"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><button id="btn">Рассчитать</button></td>
-                </tr>
-            </table>
-            <div class="error">
-                <p id="first" class="block">Начальная сумма вклада содержит ошибку ввода</p>
-                <p id="second" class="block">Сумма пополнения содержит ошибку ввода</p>
-                <p id="third" class="block">Процент содержит ошибку ввода</p>
-                <p id="fourth" class="block">Срок содержит ошибку ввода</p>
-            </div>
+      <div class="calc">
+        <table>
+          <tr>
+            <td>Начальная сумма вклада (₽)</td>
+            <td><input type="number" id="start" /></td>
+          </tr>
+          <tr>
+            <td>Сумма ежемесячного пополнения (₽)</td>
+            <td><input type="number" id="monthIncrease" /></td>
+          </tr>
+          <tr>
+            <td>Процентная ставка (%)</td>
+            <td><input type="number" id="percent" /></td>
+          </tr>
+          <tr>
+            <td>Срок вклада (дней)</td>
+            <td><input type="number" id="days" /></td>
+          </tr>
+          <tr>
+            <td colspan="2"><button id="btn">Рассчитать</button></td>
+          </tr>
+        </table>
+
+        <div class="error">
+          <p id="first" class="block">Начальная сумма вклада содержит ошибку ввода</p>
+          <p id="second" class="block">Сумма пополнения содержит ошибку ввода</p>
+          <p id="third" class="block">Процент содержит ошибку ввода</p>
+          <p id="fourth" class="block">Срок содержит ошибку ввода</p>
         </div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
