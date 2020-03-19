@@ -46,8 +46,7 @@ function checkInput(start, monthIncrease, percent, days) {
   return true;
 }
 
-btn.addEventListener("click", function() {
-  if (checkInput(startDoc, monthIncreaseDoc, percentDoc, daysDoc)) {
+function calc(startDoc, monthIncreaseDoc, percentDoc, daysDoc){
     let start = +startDoc.value;
     let monthIncrease = +monthIncreaseDoc.value;
     let percent = +percentDoc.value / 12;
@@ -60,5 +59,27 @@ btn.addEventListener("click", function() {
     console.log(Math.round(total));
     alert(Math.round(total));
     return Math.round(total);
+}
+
+btn.addEventListener("click", function() {
+  if (checkInput(startDoc, monthIncreaseDoc, percentDoc, daysDoc)) {
+    calc(startDoc, monthIncreaseDoc, percentDoc, daysDoc);
   }
 });
+
+// btn.addEventListener("click", function() {
+//   if (checkInput(startDoc, monthIncreaseDoc, percentDoc, daysDoc)) {
+//     let start = +startDoc.value;
+//     let monthIncrease = +monthIncreaseDoc.value;
+//     let percent = +percentDoc.value / 12;
+//     let days = Math.floor(+daysDoc.value / 30);
+//     let total = start;
+//     for (let i = 0; i < days; i++) {
+//       total += (total * percent) / 100;
+//       total += monthIncrease;
+//     }
+//     console.log(Math.round(total));
+//     alert(Math.round(total));
+//     return Math.round(total);
+//   }
+// });
