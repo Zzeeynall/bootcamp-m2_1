@@ -1,14 +1,14 @@
-let startDoc = document.getElementById("start");
-let monthIncreaseDoc = document.getElementById("monthIncrease");
-let percentDoc = document.getElementById("percent");
-let daysDoc = document.getElementById("days");
-let btn = document.getElementById("btn");
+let startDoc = document.getElementById("start"),
+  monthIncreaseDoc = document.getElementById("monthIncrease"),
+  percentDoc = document.getElementById("percent"),
+  daysDoc = document.getElementById("days"),
+  btn = document.getElementById("btn");
 
 //errors
-let first = document.getElementById("first");
-let second = document.getElementById("second");
-let third = document.getElementById("third");
-let fourth = document.getElementById("fourth");
+let first = document.getElementById("first"),
+  second = document.getElementById("second"),
+  third = document.getElementById("third"),
+  fourth = document.getElementById("fourth");
 
 function checkInput(start, monthIncrease, percent, days) {
   if (start.value <= 0 || monthIncrease.value <= 0 || percent.value <= 0 || percent.value > 100 || days.value <= 0 || Math.trunc(days.value) != days.value) {
@@ -61,7 +61,7 @@ function calc(startDoc, monthIncreaseDoc, percentDoc, daysDoc) {
   return Math.round(total);
 }
 
-function calculate(){
+function calculate() {
   if (checkInput(startDoc, monthIncreaseDoc, percentDoc, daysDoc)) {
     calc(startDoc, monthIncreaseDoc, percentDoc, daysDoc);
   }
