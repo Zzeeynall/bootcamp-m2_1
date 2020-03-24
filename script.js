@@ -56,9 +56,9 @@ function calc(startDoc, monthIncreaseDoc, percentDoc, daysDoc) {
     total += (total * percent) / 100;
     total += monthIncrease;
   }
-  console.log(Math.round(total));
-  alert(Math.round(total));
-  return Math.round(total);
+  console.log(total);
+  alert(total);
+  return total;
 }
 
 function calculate() {
